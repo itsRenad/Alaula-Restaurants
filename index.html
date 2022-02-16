@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alula Restaurant Home</title>
+    <link rel="stylesheet" href="style-Home-Menu-Appetizers.css">
+    <script src="myscripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+      <div class="img-and-video">
+      <!--Header Logo & Name-->
+      <img src="imgs/logo-min.png" alt="logo">
+      <!--Header Video-->
+        <video muted autoplay loop>
+            <source src="imgs/Food.mp4" type="video/mp4">
+        </video>
+      </div>
+        <!--Navigation-->
+        <div>
+      <nav>
+        <div id="myTopnav" class="topnav">
+            <a href="index.html" accesskey="H">Home</a>
+            <a href="menu.html" accesskey="M">Menu</a>
+            <a href="Reservation.html" accesskey="T">Table Reservation</a>
+            <a href="order.html" accesskey="O">Order</a>
+            <a href="staff.html" accesskey="S">Staff</a>
+            <a href="aboutus.html" accesskey="A">About Us</a>
+            <a href="contactus.html" accesskey="C">Contact US</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="icons/menu.png"></a>
+            <script>
+              function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "topnav";
+                }
+              }
+              </script>
+      </div>
+      </nav>
+      <img src = "imgs/moon.png" alt = "Dark mode" id = "icon">
+    <script>
+      var icon = document.getElementById("icon");
+      
+      icon.onclick = function(){
+      document.body.classList.toggle("dark-theme");
+      if(document.body.classList.contains("dark-theme")){
+      icon.src = "imgs/sun.png";}
+      else{
+      icon.src = "imgs/moon.png";}
+      }
+      </script> 
+    </header>
+
+  <!--Page Content : Home -->
+  <main>
+    <!--Restaurant name-->
+    <div class="resName row">
+      <img src="imgs/ResName.png" alt="logo">
+    </div>
+    <!--Story about us-->
+    <div class="thestory row">
+      <div class="col-6">
+      <h2>The Story</h2>
+      <p>Our story started with the unemployed Um Ali, she tried an incentive system and invested two thousand riyals by opening the international restaurants of AlUla in Saudi Arabia.
+        It is not just a story of struggle, but a story of the mining of cardamom and spices, today you bear witness to the success of AlUla restaurants.</p>
+        </div><div class="col-6"><img src="imgs/umali.jpeg" alt=""></div>
+    </div>
+    <!--Vision-->
+    <div class="vision row">
+      <div class="col-6">
+      <h2>Our Vision</h2>
+      <p>To offer the concept of rich and diverse Najd cuisine in its original style and in a beautiful heritage ambiance that nourishes feelings of gratitude and nostalgia.</p>
+      </div><div class="col-6"><img src="imgs/alaula1.jpeg" alt=""></div>
+    </div>
+    <!--mission-->
+    <div class="mission row">
+      <div class="col-6">
+      <h2>Our Mission</h2>
+      <p>To continue to have pride in our history while remembering the old Najd lifestyle and Arab cuisine in an environment that combines the uniqueness of the heritage and its architecture and antiques with the warmth of hospitality and generosity and quality of service, and above all .. the taste of excellence by relying on our long experience.</p>
+      </div><div class="col-6"><img src="imgs/alaula2.jpeg" alt=""></div>
+    </div>
+    <!--Signature Dishes-->
+    <div class="SDishes row">
+      <h2>Signature Dishes</h2>
+      <div class="DisheCard1">
+        <div class="DisheCard1text"><h3>Kabsa</h3>
+          <p>The original kabsa from Umm Saleh's hands, mined with cardamom, black pepper and raisins</p></div>
+         <img src="imgs/kabsa.jpeg" alt="Kabsa">
+         <!--
+         <button class="orderbutton" style="font-size:0.8em; width: 25%; height: 5%;">Add</button>-->
+      </div>
+
+      <div class="DisheCard2">
+        <div class="DisheCard2text"><h3>Eggplant Bites</h3>
+          <p>Eggplant Bites Made with Saudi Eggplants, breadcrumbs, herbs and speacial saudi spices</p></div>
+         <img src="imgs/eggplant.jpeg" alt="Eggplant">
+         <!--
+         <button class="orderbutton" style="font-size:0.8em; width: 25%; height: 5%;">Add</button>-->
+      </div>
+
+      <div class="DisheCard3"> 
+        <div class="DisheCard3text"><h3>Baklava</h3>
+          <p>Our baklava straight from the bakery into your hands</p></div>
+        <img src="imgs/baklava.png" alt="Baklava">
+        <!--
+        <button class="orderbutton" style="font-size:0.8em; width: 25%; height: 5%;">Add</button>-->
+      </div>
+    </div>
+
+    
+    <!--Location-->
+    <div class="Locations row">
+      <h2>Our Locations</h2>
+      <div class="location1 col-3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.046614830293!2d46.65798978519421!3d24.793857284085334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee33f4e066e67%3A0x239cb3e91b2cca54!2z2YjZhiDYs9mD2YjZitix!5e0!3m2!1sar!2ssa!4v1636540752430!5m2!1sar!2ssa" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="col-3">
+        <ul>
+          <li class="loc">Riyadh
+            - Anas Bin Malik Road</li>
+            <li class="phone">+9669201739</li>
+            <li class="hours">6 am- 12 am</li>
+            <li class="calendar">All week days</li>
+        </ul>
+      </div>
+      <div class="location2 col-3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.340352496604!2d46.64339098519372!3d24.818031684073976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee40eefcb6a9d%3A0xbc4308498520f827!2z2LfYsdmK2YIg2KPZhtizINin2KjZhiDZhdin2YTZg9iMINin2YTYsdmK2KfYtg!5e0!3m2!1sar!2ssa!4v1636540929843!5m2!1sar!2ssa" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+        <div class="col-3">
+        <ul>
+          <li class="loc">Riyadh - One Square</li>
+            <li class="phone">+9669102732</li>
+            <li class="hours">6 am- 12 am</li>
+            <li class="calendar">All week days</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <!--Footer-->
+  <footer class="row">
+    <!--Main Menu-->
+    <div class="footer-main-menu col-4">
+        <strong>Main Menu</strong>
+        <ul>
+            <li><a href="index.html" accesskey="H">Home</a></li>
+            <li><a href="menu.html"accesskey="M">Menu</a></li>
+            <li><a href="Reservation.html"accesskey="T">Table Reservation</a></li>
+            <li><a href="order.html"accesskey="O">Order</a></li>
+            <li><a href="staff.html"accesskey="S">Staff</a></li>
+            <li><a href="aboutus.html"accesskey="A">About Us</a></li>
+            <li><a href="contactus.html"accesskey="C">Contact US</a></li>
+        </ul>
+    </div>
+
+    <!--Branches-->
+    <div class="footer-branches col-4">
+    <strong>Branches</strong>
+    <ul>
+        <li><p>Anas Bin Malik Road<br>
+            Riyadh, Saudi Arabia</p></li>
+        <li><p>
+          Riyadh - One Square
+        </p></li>
+    </ul>
+    </div>
+
+    <!--Contact Us-->
+    <div class="footer-Contact-us col-4">
+    <strong>Contact Us</strong>
+    <ul>
+        <li>Tel : +9667301638</li>
+        <li>Email: <a href="mailto:info@Alaula.co.ksa">info@Alaula.co.ksa</a></li>
+    </ul>
+    </div>
+
+    <!--Social Media-->
+    <div class="footer-Social-Media col-4">
+    <strong>Social Media</strong>
+    <ul>
+    <li><a target="_blank" href="https://twitter.com/">Twitter</a></li>
+    <li><a target="_blank" href="https://Instagram.com/">Instagram</a></li>
+    <li><a target="_blank" href="https://Facebook.com/">Facebook</a></li>
+    </ul>
+    </div>
+
+    <!--Copy Rights-->
+    <div class="row">
+    <p class="col-12 Copyrights">Copyright &copy; 2021 Alaula Restaurants . All Rights Reserved</p>
+</div>
+  </footer>
+</body>
+</html>

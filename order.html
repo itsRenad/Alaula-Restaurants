@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Order</title>
+    <link rel="stylesheet" href="style-Home-Menu-Appetizers.css">
+    <link rel="stylesheet" href="style-Order.css">
+    <script src="myscripts.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="img-and-video">
+        <!--Header Logo & Name-->
+        <img src="imgs/logo-min.png" alt="logo">
+        <!--Header Video-->
+          <video muted autoplay loop>
+              <source src="imgs/Food.mp4" type="video/mp4">
+          </video>
+        </div>
+          <!--Navigation-->
+          <div>
+        <nav>
+          <div id="myTopnav" class="topnav">
+              <a href="index.html" accesskey="H">Home</a>
+              <a href="menu.html" accesskey="M">Menu</a>
+              <a href="Reservation.html" accesskey="T">Table Reservation</a>
+              <a href="order.html" accesskey="O">Order</a>
+              <a href="staff.html" accesskey="S">Staff</a>
+              <a href="aboutus.html" accesskey="A">About Us</a>
+              <a href="contactus.html" accesskey="C">Contact US</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="icons/menu.png"></a>
+              <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+                </script>
+        </div>
+        </nav>
+        <img src = "imgs/moon.png" alt = "Dark mode" id = "icon">
+      <script>
+        var icon = document.getElementById("icon");
+        
+        icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+        icon.src = "imgs/sun.png";}
+        else{
+        icon.src = "imgs/moon.png";}
+        }
+        </script> 
+      </header>
+
+<!--Page Content : Order Page -->
+<main>
+    <!--Bread crumbs-->
+    <ul class="breadcrumb">
+        <li><a href="index.html" accesskey="H">Home</a></li>
+        <li>Order</li>
+    </ul>
+    <form id="formm" action="" method="get" onsubmit="formProcess(event)">
+        <h2 class="headline">Order</h2>
+
+        <label class="dropdown"> Table number
+            <select id="tablenumber" name="tablenumber"  class="tablenumber-dropdown" >
+            </select>
+        </label>
+        <h4 class="bites"> Appatizers
+            <button type="button" onclick="sort($('.appatizers .rowO'), 0)">SORT Low > High</button>
+            <button type="button" onclick="sort($('.appatizers .rowO'), 1)">SORT High > Low</button>
+        </h4>
+        <section>
+            <article class="appatizers">
+
+                <div class="rowO">
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/bread.jpg" alt="Bread" class="imgstyles">
+                            <div class="container">
+                                <span class="name">Bread</span> <br>
+                                <span class="price">58</span> SAR <br>
+                                <label>
+                                    Quantity?
+                                    <select name="Bread_58">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/eggplant.jpeg" alt="eggplant bites" class="imgstyles">
+                            <div class="container">
+                                <span class="name">Eggplant Bite</span> <br>
+                                <span class="price">80</span> SAR <br>
+
+                                <label>
+                                    Quantity?
+                                    <select name="Eggplant-Bite_80">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/samosa.jpeg" alt="Sambosa" class="imgstyles">
+                            <div class="container">
+                                <span class="name">Sambosa</span> <br>
+                                <span class="price">89</span> SAR <br>
+                                <label>
+                                    Quantity?
+                                    <select name="Sambosa_89">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+
+            <h4 class="bites"> Main
+                <button type="button" onclick="sort($('.Maindishes .rowO'), 0)">SORT Low > High</button>
+                <button type="button" onclick="sort($('.Maindishes .rowO'), 1)">SORT High > Low</button>
+            </h4>
+
+
+            <article class="Maindishes">
+                <div class="rowO">
+
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/kabsa.jpeg" alt="Kabsa " class="imgstyles">
+                            <div class="container">
+                                <span class="name">Kabsa</span> <br>
+                                <span class="price">150</span> SAR <br>
+
+                                <label>
+                                    Quantity?
+                                    <select name="Kabsa_150">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/lasagne.jpeg" alt="lasagne" class="imgstyles">
+                            <div class="container">
+                                <span class="name">Lasagne</span> <br>
+                                <span class="price">90</span> SAR <br>
+
+                                <label>
+                                    Quantity?
+                                    <select name="Lasagne_90">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/soup2.jpg" alt="Lentil soup" class="imgstyles">
+                            <div class="container">
+                                <span class="name">Lentil Soup</span> <br>
+                                <span class="price">70</span> SAR <br>
+
+                                <label>
+                                    Quantity?
+                                    <select name="Lentil-Soup_70">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </article>
+
+
+            <h4 class="bites"> Desserts
+                <button type="button" onclick="sort($('.desserts .rowO'), 0)">SORT Low > High</button>
+                <button type="button" onclick="sort($('.desserts .rowO'), 1)">SORT High > Low</button>
+            </h4>
+
+
+            <article class="desserts">
+                <div class="rowO">
+
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/tiramisu.jpg" alt="tiramisu" class="imgstyles">
+                            <div class="container">
+                                <span class="name">Tiramisu</span> <br>
+                                <span class="price">40</span> SAR <br>
+
+                                <label>
+                                    Quantity?
+                                    <select name="Tiramisu_40">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/icecream.jpeg" alt="Pistachio ice cream" class="imgstyles">
+                            <div class="container">
+                                <span class="name">Pistachio ice cream</span> <br>
+                                <span class="price">35</span> SAR <br>
+
+                                <label>
+                                    Quantity?
+                                    <select name="Pistachio-ice-cream_35">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/baklava.png" alt="Baklava" class="imgstyles">
+                            <div class="container">
+                                <span class="name">Baklava</span> <br>
+                                <span class="price">45</span> SAR <br>
+
+                                <label>
+                                    Quantity?
+                                    <select name="Baklava_45">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </article>
+
+
+            <h4 class="bites"> Drinks
+                <button type="button" onclick="sort($('.drinks .rowO'), 0)">SORT Low > High</button>
+                <button type="button" onclick="sort($('.drinks .rowO'), 1)">SORT High > Low</button>
+            </h4>
+
+
+            <article class="drinks">
+                <div class="rowO">
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/coke.png" alt="cocacola" class="imgstyles">
+                            <div class="container">
+                                <span class="name">Coca cola</span> <br>
+                                <span class="price">25</span> SAR <br>
+
+                                <label>
+                                    Quantity?
+                                    <select name="Coca-Cola_25">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/water.png" alt="water" class="imgstyles">
+                            <div class="container">
+                                <span class="name">Water</span> <br>
+                                <span class="price">10</span> SAR <br>
+
+                                <label>
+                                    Quantity?
+                                    <select name="Water_10">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card">
+                            <img src="imgs/tea.png" alt="tea" class="imgstyles">
+                            <div class="container">
+                                <span class="name">Tea</span> <br>
+                                <span class="price">20</span> SAR <br>
+
+                                <label>
+                                    Quantity?
+                                    <select name="Tea_20">
+                                        <option value="0">0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </label>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </article>
+
+        </section>
+
+
+        <button class="ADD" type="submit">ADD</button>
+
+        <hr>
+
+
+        <h4>Invocies</h4>
+
+        <div class="invoices rowO" style="flex-wrap: wrap;"></div>
+<!--        <fieldset>-->
+
+<!--            <legend></legend>-->
+<!--            <div id="bills" class="bills"></div>-->
+
+<!--            <input class="printbutton" type="button" value="Print" onclick="print()>-->
+<!--        </fieldset>-->
+    </form>
+
+</main>
+
+<!--Footer-->
+<footer class="row">
+    <!--Main Menu-->
+    <div class="footer-main-menu col-4">
+        <strong>Main Menu</strong>
+        <ul>
+            <li><a href="index.html" accesskey="H">Home</a></li>
+            <li><a href="menu.html"accesskey="M">Menu</a></li>
+            <li><a href="Reservation.html"accesskey="T">Table Reservation</a></li>
+            <li><a href="order.html"accesskey="O">Order</a></li>
+            <li><a href="staff.html"accesskey="S">Staff</a></li>
+            <li><a href="aboutus.html"accesskey="A">About Us</a></li>
+            <li><a href="contactus.html"accesskey="C">Contact US</a></li>
+        </ul>
+    </div>
+
+    <!--Branches-->
+    <div class="footer-branches col-4">
+    <strong>Branches</strong>
+    <ul>
+        <li><p>Anas Bin Malik Road<br>
+            Riyadh, Saudi Arabia</p></li>
+        <li><p>
+          Riyadh - One Square
+        </p></li>
+    </ul>
+    </div>
+
+    <!--Contact Us-->
+    <div class="footer-Contact-us col-4">
+    <strong>Contact Us</strong>
+    <ul>
+        <li>Tel : +9667301638</li>
+        <li>Email: <a href="mailto:info@Alaula.co.ksa">info@Alaula.co.ksa</a></li>
+    </ul>
+    </div>
+
+    <!--Social Media-->
+    <div class="footer-Social-Media col-4">
+    <strong>Social Media</strong>
+    <ul>
+    <li><a target="_blank" href="https://twitter.com/">Twitter</a></li>
+    <li><a target="_blank" href="https://Instagram.com/">Instagram</a></li>
+    <li><a target="_blank" href="https://Facebook.com/">Facebook</a></li>
+    </ul>
+    </div>
+
+    <!--Copy Rights-->
+    <div class="row">
+    <p class="col-12 Copyrights">Copyright &copy; 2021 Alaula Restaurants . All Rights Reserved</p>
+</div>
+  </footer>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="orderscript.js"></script>
+<div id="orderPage"></div>
+
+<script src="./main.js"></script>
+
+</body>
+</html>

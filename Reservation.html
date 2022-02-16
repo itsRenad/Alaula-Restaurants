@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reservation</title>
+    <link rel="stylesheet" href="style-Home-Menu-Appetizers.css">
+    <link rel="StyleSheet" href="styleReservation.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    
+</head>
+
+<body>
+    <header>
+        <div class="img-and-video">
+        <!--Header Logo & Name-->
+        <img src="imgs/logo-min.png" alt="logo">
+        <!--Header Video-->
+          <video muted autoplay loop>
+              <source src="imgs/Food.mp4" type="video/mp4">
+          </video>
+        </div>
+          <!--Navigation-->
+          <div>
+        <nav>
+          <div id="myTopnav" class="topnav">
+              <a href="index.html" accesskey="H">Home</a>
+              <a href="menu.html" accesskey="M">Menu</a>
+              <a href="Reservation.html" accesskey="T">Table Reservation</a>
+              <a href="order.html" accesskey="O">Order</a>
+              <a href="staff.html" accesskey="S">Staff</a>
+              <a href="aboutus.html" accesskey="A">About Us</a>
+              <a href="contactus.html" accesskey="C">Contact US</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="icons/menu.png"></a>
+              <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+                </script>
+        </div>
+        </nav>
+        <img src = "imgs/moon.png" alt = "Dark mode" id = "icon">
+      <script>
+        var icon = document.getElementById("icon");
+        
+        icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+        icon.src = "imgs/sun.png";}
+        else{
+        icon.src = "imgs/moon.png";}
+        }
+        </script> 
+      </header>
+  <!--Page Content : Reservation -->
+  <main>
+       <!--Bread crumbs-->
+    <ul class="breadcrumb">
+        <li><a href="index.html"accesskey="H">Home</a></li>
+        <li>Reservation</li>
+      </ul>
+      <div class="ResPage">
+    <div class="root-container">
+			<div class="search-container">
+				<div class="search-field">
+					<input type="text" name="" id="" placeholder="Serach Guest" class="guest-filter" />
+					<span><i class="fa fa-search"></i></span>
+				</div>
+				<div class="seated">
+					<h2>
+						<span><i class="fa fa-user"></i></span>
+						Seated
+					</h2>
+					<h3 class="seat-card-total">0</h3>
+				</div>
+                <div class="seat-card-wrap"></div>
+			</div>
+                    <!--tables container-->
+                    <div class="table-container">
+                        <div class="header-content">
+                            <button class="reservbt" id="reservation-btn" : hover>
+                                <h3>
+                                    <span> <i class="fa fa-plus"></i> </span>
+                                      New Reservation
+                                </h3>
+                            </button>
+                        </div>
+
+                        <div class="table-images"></div>
+                    </div>
+                </div>
+  <!--pop up starts-->
+  <div class="reservation-popup" id ="mymodal">
+    <div class="reservation-container">
+        <form action="javascript:void(0)" method="POST">
+            <div class="popup-header">
+                <h2>New Reservation</h2>
+                <h2>
+                    <span id="close"><i class="fa fa-times"></i></span>
+                </h2>
+            </div>
+            <div class="reservation-popup-details">
+                <div class="reservation-popup-detail">
+                    <h2>Reservation Details</h2>
+                    <div class="details-wrapper">
+                        <h4>Date</h4>
+                        <input type="date" name="resdate"  value="" required class="date-input" >
+                    </div>
+                    <div class="details-wrapper">
+                        <h4>Time</h4>
+                        <input type="time" name="timeres"  value="" required class="time-input" >
+                    </div>
+                    <div class="details-wrapper">
+                        <h4>Guest</h4>
+                        <div>
+                            <input type="number" name="guestnumb" value="" required min="1" class="guest-input">
+                        </div>
+                    </div>
+                    <div class="phone-wrapper">
+                        <h5>Phone Number</h5>
+                        <input type="text" name="phonenumb" value="" placeholder="+966" id="" required data-pattern="^\+966\d*$" class="phone-input" />
+                    </div>
+                    <div class="guest-wrapper">
+                        <h5>guest Name</h5>
+                        <input type="Text" name="guestname" placeholder="Guest Name" required data-pattern="^[a-zA-Z ]*$" data-invalid-msg="Please enter only alphabets and spaces" class="guest-name-input" >
+                    </div>
+                </div>
+                <div class="reservation-popup-table">
+                    <h2>Table Details</h2>
+                    <div class="table-field-wrapper">
+                        <div class="table-field">
+                            <input type="text" placeholder="Table no" required class="table-number-input" />
+                        </div>
+                        <div class="available">
+                            <p> <span>0</span> Available</p>
+                        </div>
+                    </div>
+                    <div class="table-number-container"></div>
+                </div>
+            </div>
+            <div class="create-reservartion">
+                <div class="available">
+                    <button><p><i class="fa fa-plus"></i> Create Reservation</p></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+    </div>
+  </main>
+
+  <div id="reservedPage"></div>
+
+  <script src="./main.js"></script>
+  
+ <!--Footer-->
+ <footer class="row">
+    <!--Main Menu-->
+    <div class="footer-main-menu col-4">
+        <strong>Main Menu</strong>
+        <ul>
+            <li><a href="index.html" accesskey="H">Home</a></li>
+            <li><a href="menu.html"accesskey="M">Menu</a></li>
+            <li><a href="Reservation.html"accesskey="T">Table Reservation</a></li>
+            <li><a href="order.html"accesskey="O">Order</a></li>
+            <li><a href="staff.html"accesskey="S">Staff</a></li>
+            <li><a href="aboutus.html"accesskey="A">About Us</a></li>
+            <li><a href="contactus.html"accesskey="C">Contact US</a></li>
+        </ul>
+    </div>
+
+    <!--Branches-->
+    <div class="footer-branches col-4">
+    <strong>Branches</strong>
+    <ul>
+        <li><p>Anas Bin Malik Road<br>
+            Riyadh, Saudi Arabia</p></li>
+        <li><p>
+          Riyadh - One Square
+        </p></li>
+    </ul>
+    </div>
+
+    <!--Contact Us-->
+    <div class="footer-Contact-us col-4">
+    <strong>Contact Us</strong>
+    <ul>
+        <li>Tel : +9667301638</li>
+        <li>Email: <a href="mailto:info@Alaula.co.ksa">info@Alaula.co.ksa</a></li>
+    </ul>
+    </div>
+
+    <!--Social Media-->
+    <div class="footer-Social-Media col-4">
+    <strong>Social Media</strong>
+    <ul>
+    <li><a target="_blank" href="https://twitter.com/">Twitter</a></li>
+    <li><a target="_blank" href="https://Instagram.com/">Instagram</a></li>
+    <li><a target="_blank" href="https://Facebook.com/">Facebook</a></li>
+    </ul>
+    </div>
+
+    <!--Copy Rights-->
+    <div class="row">
+    <p class="col-12 Copyrights">Copyright &copy; 2021 Alaula Restaurants . All Rights Reserved</p>
+</div>
+  </footer>
+</body>
+
+</html>
